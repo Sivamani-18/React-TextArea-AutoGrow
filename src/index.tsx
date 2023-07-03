@@ -9,6 +9,8 @@ type Props = {
   disable?: boolean;
   readonly?: boolean;
   rows?: number | undefined;
+  minRows?: number | undefined;
+  maxRows?: number | undefined;
   minLength?: number | undefined;
   maxLength?: number | undefined;
   fixedSize?: boolean;
@@ -35,6 +37,8 @@ const TextArea = (props: Props) => {
     variant,
     borderRadious,
     rows = 3,
+    minRows,
+    maxRows,
     minLength,
     maxLength,
     fixedSize,
@@ -58,13 +62,32 @@ const TextArea = (props: Props) => {
     }
   }, [textAreaValue]);
 
+  useEffect(() => {
+    if (textareaRef && textareaRef.current && minRows && maxRows) {
+      textareaRef.current.rows = minRows;
+      textareaRef.current.style.height = 'auto';
+      const scrollHeight = textareaRef.current.scrollHeight;
+      const lineHeight = parseInt(
+        window.getComputedStyle(textareaRef.current).lineHeight
+      );
+      const rows = Math.min(
+        maxRows,
+        Math.max(minRows, Math.ceil(scrollHeight / lineHeight))
+      );
+      textareaRef.current.rows = rows; // Limit the number of rows
+      textareaRef.current.style.height = `${rows * lineHeight}px`;
+    }
+  }, [minRows, maxRows, textAreaValue]); // Include textAreaValue in the dependency array
+
   const onChange = (event: any) => {
     handleChange(event);
     if (AutoGrow) {
-      setTextAreaValue(event.target.value);
+      setTextAreaValue(event.target.value); // Update textAreaValue state variable
     }
   };
+
   //  Auto Growing Textarea End //
+
   return (
     <>
       <div

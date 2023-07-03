@@ -56,7 +56,7 @@ export default App;
 
 ```
 
-Note: The **__minLength__** and **__maxLength__** props are optional. If not specified, the textarea will automatically adjust its height based on the content.
+Note: The **__minRows__** and **__maxRows__** props are optional. If not specified, the textarea will automatically adjust its height based on the content.
 
 ## Props
 
@@ -81,7 +81,8 @@ The TextArea component accepts the following props:
 | variant        | 'default' \| 'primary' \| 'secondary' (required)                     | Represents the variant of the textarea. Possible values: 'default', 'primary', or 'secondary'.         |
 | handleChange   | (event: React.ChangeEvent<HTMLTextAreaElement>) => void (required)   | Function called when the textarea value changes. Accepts a `ChangeEvent` object as an argument.        |
 | addClass       | string (optional)                                                   | Represents additional CSS classes to be added to the textarea.                                          |
-
+| minRows        | number (optional) or undefined                                       | Represents the minimum number of rows the textarea should have.                                          |
+| maxRows        | number (optional) or undefined                                       | Represents the maximum number of rows the textarea can expand to.                                        |
 
 ## Configuration Options
 
