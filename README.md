@@ -18,7 +18,7 @@ or
 yarn add react-textarea-auto-resize
 ```
 
-## Usage [Demo](https://codesandbox.io/s/react-auto-grow-textarea-yzdtmr?file=/src/App.tsx:578-585)
+## Usage [Demo](https://codesandbox.io/s/react-textarea-auto-resize-yzdtmr)
 
 Here's an example of how you can use the TextArea component from the package in your React application:
 
