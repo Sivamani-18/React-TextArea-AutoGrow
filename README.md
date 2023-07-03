@@ -23,37 +23,33 @@ yarn add react-textarea-auto-resize
 Here's an example of how you can use the TextArea component from the package in your React application:
 
 ```sh
-import React, { useState } from 'react';
-import TextArea from 'react-textarea-auto-resize';
+import React from "react";
+import TextArea from "react-textarea-auto-resize";
 
 const App = () => {
-  const [text, setText] = useState('');
-
-  const handleChange = (event) => {
-    setText(event.target.value);
-  };
 
   return (
     <div>
       <TextArea
-        label="Enter your text"
-        placeholder="Type something..."
-        name="text"
+        label="Label"
+        placeholder="Placeholder"
+        name="myTextArea"
         value=""
         variant="default"
         borderRadious="small"
         rows={3}
         fixedSize={true}
         AutoGrow={true}
-        handleChange={handleChange}
-        addClass="custom-class"
+        handleChange={(event: any) => {
+          // Handle the change event
+        }}
+        addClass="myTextareaClass"
       />
     </div>
   );
 };
 
 export default App;
-
 ```
 
 Note: The **__minRows__** and **__maxRows__** props are optional. If not specified, the textarea will automatically adjust its height based on the content.
