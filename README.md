@@ -52,7 +52,7 @@ const App = () => {
 export default App;
 ```
 
-Note: The **__minRows__** and **__maxRows__** props are optional. If not specified, the textarea will automatically adjust its height based on the content.
+Note: The **minRows** and **maxRows** props are optional. If not specified, the textarea will automatically adjust its height based on the content. If you want to use **maxRows**, make sure to add **minRows** as well.
 
 ## Props
 
