@@ -1,0 +1,48 @@
+{
+  "name": "react-textarea-auto-resize",
+  "version": "1.1.1",
+  "private": false,
+  "description": "The react-textarea-auto-resize npm package is a utility that provides an auto-resizing feature for textarea components in React. It automatically adjusts the height of a textarea based on its content, allowing it to grow or shrink dynamically as the user types or deletes text.",
+  "main": "dist/bundle.js",
+  "module": "dist/bundle.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "rollup -c",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sivamani-18/React-TextArea-AutoGrow.git"
+  },
+  "keywords": [
+    "auto-resize",
+    "react-textarea-auto-resize",
+    "react-textarea-autosize",
+    "textarea-autosize",
+    "resize",
+    "textarea-auto-resize"
+  ],
+  "author": "Sivamani-18",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Sivamani-18/React-TextArea-AutoGrow/issues"
+  },
+  "homepage": "https://github.com/Sivamani-18/React-TextArea-AutoGrow#readme",
+  "dependencies": {
+    "@types/prop-types": "^15.7.5",
+    "@types/react": "^18.2.14",
+    "@types/react-dom": "^18.2.6",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "rollup": "^2.0.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.35.0",
+    "@rollup/plugin-babel": "^6.0.3",
+    "@rollup/plugin-commonjs": "^25.0.2",
+    "@rollup/plugin-node-resolve": "^15.1.0",
+    "tslib": "^2.6.0"
+  }
+}
