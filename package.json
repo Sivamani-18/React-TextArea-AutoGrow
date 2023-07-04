@@ -1,6 +1,6 @@
 {
   "name": "react-textarea-auto-resize",
-  "version": "1.1.7",
+  "version": "1.1.8",
   "private": false,
   "description": "The react-textarea-auto-resize npm package is a utility that provides an auto-resizing feature for textarea components in React. It automatically adjusts the height of a textarea based on its content, allowing it to grow or shrink dynamically as the user types or deletes text.",
   "main": "dist/bundle.js",
@@ -9,10 +9,6 @@
   "scripts": {
     "build": "rollup -c",
     "prepublishOnly": "npm run build"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Sivamani-18/React-TextArea-AutoGrow.git"
   },
   "keywords": [
     "auto-resize",
@@ -24,10 +20,7 @@
   ],
   "author": "Sivamani-18",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Sivamani-18/React-TextArea-AutoGrow/issues"
-  },
-  "homepage": "https://github.com/Sivamani-18/React-TextArea-AutoGrow#readme",
+  "homepage": "https://gist.github.com/Sivamani-18/a0639b0ae69a5ee18bc5c78502544baf",
   "dependencies": {
     "@types/prop-types": "^15.7.5",
     "@types/react": "^18.2.14",
